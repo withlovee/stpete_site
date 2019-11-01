@@ -1,0 +1,932 @@
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#" class="js js no-touch"><!--<![endif]--><head><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style>.gm-style .transit-container{background-color:white;max-width:265px;overflow-x:hidden}.gm-style .transit-container .transit-title span{font-size:14px;font-weight:500}.gm-style .transit-container .transit-title{padding-bottom:6px}.gm-style .transit-container .transit-wheelchair-icon{background:transparent url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png');background-size:59px 492px;display:inline-block;background-position:-5px -450px;width:13px;height:13px}.gm-style.gm-china .transit-container .transit-wheelchair-icon{background-image:url('http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6.png')}@media (-webkit-min-device-pixel-ratio:1.2),(min-resolution:1.2dppx),(min-resolution:116dpi){.gm-style .transit-container .transit-wheelchair-icon{background-image:url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6_hdpi.png');background-size:59px 492px;display:inline-block;background-position:-5px -449px;width:13px;height:13px}.gm-style.gm-china .transit-container .transit-wheelchair-icon{background-image:url('http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6_hdpi.png')}}.gm-style .transit-container div{background-color:white;font-size:11px;font-weight:300;line-height:15px}.gm-style .transit-container .transit-line-group{overflow:hidden;margin-right:-6px}.gm-style .transit-container .transit-line-group-separator{border-top:1px solid #e6e6e6;padding-top:5px}.gm-style .transit-container .transit-nlines-more-msg{color:#999;margin-top:-3px;padding-bottom:6px}.gm-style .transit-container .transit-line-group-vehicle-icons{display:inline-block;padding-right:10px;vertical-align:top;margin-top:1px}.gm-style .transit-container .transit-line-group-content{display:inline-block;min-width:100px;max-width:228px;margin-bottom:-3px}.gm-style .transit-container .transit-clear-lines{clear:both}.gm-style .transit-container .transit-div-line-name{float:left;padding:0 6px 6px 0;white-space:nowrap}.gm-style .transit-container .transit-div-line-name .gm-transit-long{width:107px}.gm-style .transit-container .transit-div-line-name .gm-transit-medium{width:50px}.gm-style .transit-container .transit-div-line-name .gm-transit-short{width:37px}.gm-style .transit-div-line-name .renderable-component-icon{float:left;margin-right:2px}.gm-style .transit-div-line-name .renderable-component-color-box{background-image:url(https://maps.gstatic.com/mapfiles/transparent.png);height:10px;width:4px;float:left;margin-top:3px;margin-right:3px;margin-left:1px}.gm-style.gm-china .transit-div-line-name .renderable-component-color-box{background-image:url(http://maps.gstatic.cn/mapfiles/transparent.png)}.gm-style .transit-div-line-name .renderable-component-text{text-align:left;overflow:hidden;text-overflow:ellipsis;display:block}.gm-style .transit-div-line-name .renderable-component-text-box{overflow:hidden;text-overflow:ellipsis;display:block;font-size:8pt;font-weight:400;text-align:center;padding:1px 2px}.gm-style .transit-div-line-name .renderable-component-text-box-white{border:solid 1px #ccc;background-color:white;padding:0 2px}.gm-style .transit-div-line-name .renderable-component-bold{font-weight:400}
+</style><style>.poi-info-window div,.poi-info-window a{color:#333;font-family:Roboto,Arial;font-size:13px;background-color:white;-moz-user-select:text;-webkit-user-select:text;-ms-user-select:text;user-select:text}.poi-info-window{cursor:default}.poi-info-window a:link{text-decoration:none;color:#427fed}.poi-info-window .view-link,.poi-info-window a:visited{color:#427fed}.poi-info-window .view-link:hover,.poi-info-window a:hover{cursor:pointer;text-decoration:underline}.poi-info-window .full-width{width:180px}.poi-info-window .title{overflow:hidden;font-weight:500;font-size:14px}.poi-info-window .address{margin-top:2px;color:#555}
+</style><style>.gm-style .gm-style-iw{font-weight:300;font-size:13px;overflow:hidden}.gm-style .gm-style-iw-a{position:absolute;width:9999px;height:0}.gm-style .gm-style-iw-t{position:absolute;width:100%}.gm-style .gm-style-iw-t::after{background:white;box-shadow:-2px 2px 2px 0 rgba(178,178,178,.4);content:"";height:15px;left:0;position:absolute;top:0;transform:translate(-50%,-50%) rotate(-45deg);width:15px}.gm-style .gm-style-iw-c{position:absolute;box-sizing:border-box;overflow:hidden;top:0;left:0;transform:translate(-50%,-100%);background-color:white;border-radius:8px;padding:12px;box-shadow:0 2px 7px 1px rgba(0,0,0,0.3)}.gm-style .gm-style-iw-d{box-sizing:border-box;overflow:auto}.gm-style .gm-style-iw-d::-webkit-scrollbar{width:18px;height:12px;-webkit-appearance:none}.gm-style .gm-style-iw-d::-webkit-scrollbar-track,.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{background:#fff}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,0.12);border:6px solid transparent;border-radius:9px;background-clip:content-box}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:horizontal{border:3px solid transparent}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:hover{background-color:rgba(0,0,0,0.3)}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-corner{background:transparent}.gm-style .gm-iw{color:#2c2c2c}.gm-style .gm-iw b{font-weight:400}.gm-style .gm-iw a:link,.gm-style .gm-iw a:visited{color:#4272db;text-decoration:none}.gm-style .gm-iw a:hover{color:#4272db;text-decoration:underline}.gm-style .gm-iw .gm-title{font-weight:400;margin-bottom:1px}.gm-style .gm-iw .gm-basicinfo{line-height:18px;padding-bottom:12px}.gm-style .gm-iw .gm-website{padding-top:6px}.gm-style .gm-iw .gm-photos{padding-bottom:8px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style .gm-iw .gm-sv,.gm-style .gm-iw .gm-ph{cursor:pointer;height:50px;width:100px;position:relative;overflow:hidden}.gm-style .gm-iw .gm-sv{padding-right:4px}.gm-style .gm-iw .gm-wsv{cursor:pointer;position:relative;overflow:hidden}.gm-style .gm-iw .gm-sv-label,.gm-style .gm-iw .gm-ph-label{cursor:pointer;position:absolute;bottom:6px;color:#fff;font-weight:400;text-shadow:rgba(0,0,0,0.7) 0 1px 4px;font-size:12px}.gm-style .gm-iw .gm-stars-b,.gm-style .gm-iw .gm-stars-f{height:13px;font-size:0}.gm-style .gm-iw .gm-stars-b{position:relative;background-position:0 0;width:65px;top:3px;margin:0 5px}.gm-style .gm-iw .gm-rev{line-height:20px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style.gm-china .gm-iw .gm-rev{display:none}.gm-style .gm-iw .gm-numeric-rev{font-size:16px;color:#dd4b39;font-weight:400}.gm-style .gm-iw.gm-transit{margin-left:15px}.gm-style .gm-iw.gm-transit td{vertical-align:top}.gm-style .gm-iw.gm-transit .gm-time{white-space:nowrap;color:#676767;font-weight:bold}.gm-style .gm-iw.gm-transit img{width:15px;height:15px;margin:1px 5px 0 -20px;float:left}
+</style><style>.gm-iw {text-align:left;}.gm-iw .gm-numeric-rev {float:left;}.gm-iw .gm-photos,.gm-iw .gm-rev {direction:ltr;}.gm-iw .gm-stars-f, .gm-iw .gm-stars-b {background:url("https://maps.gstatic.com/mapfiles/api-3/images/review_stars_hdpi.png") no-repeat;background-size: 65px 26px;float:left;}.gm-iw .gm-stars-f {background-position:left -13px;}.gm-iw .gm-sv-label,.gm-iw .gm-ph-label {left: 4px;}</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans"><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+<style>
+.caption, .video-holder, .video-caption, #header nav>ul.menu>li.expanded>a:after {
+  display: none !important;
+}
+.beach-info h2 {
+  margin-top: 50px;
+}
+</style>
+  <meta name="referrer" content="origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="canonical" href="https://www.visitstpeteclearwater.com/things-to-do/beaches">
+<meta name="keywords" content="Florida Beaches">
+<link rel="apple-touch-icon" href="https://www.visitstpeteclearwater.com/sites/all/themes/mmg_vspc/images/apple-touch-icon-114x114.png" sizes="114x114">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortlink" href="/node/36959">
+<link rel="apple-touch-icon" href="https://www.visitstpeteclearwater.com/sites/all/themes/mmg_vspc/images/apple-touch-icon.png">
+<link rel="shortcut icon" href="https://www.visitstpeteclearwater.com/sites/all/themes/mmg_vspc/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="Florida Beaches finest! Explore endless things to do on Florida's best beaches like Clearwater Beach, St. Pete Beach, Fort Desoto and more!">
+<script src="https://rules.quantcount.com/rules-p-d5ZDrqe9XYp4Y.js" async=""></script><script src="https://secure.quantserve.com/quant.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="//com-stpete.netmng.com/?aid=6027&amp;siclientid=104546&amp;url=https%3A%2F%2Fwww.visitstpeteclearwater.com%2Fthings-to-do%2Fbeaches%3Futm_campaign%3Dfy20brand%26utm_source%3Domnivirt%26utm_medium%3Ddisplay%26utm_content%3Dbeaches&amp;p1=2031294407&amp;p12=%2Fthings-to-do%2Fbeaches&amp;p13=undefined"></script><script async="" src="//marketing.visitspc.com/cdnr/58/acton/bn/tracker/40563"></script><script src="https://connect.facebook.net/signals/config/1639202592813968?v=2.9.5&amp;r=stable" async=""></script><script src="https://connect.facebook.net/signals/config/1749644125309986?v=2.9.5&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="//assets.pinterest.com/js/pinit_main.js?0.4984578026188229"></script><script type="text/javascript" async="" src="//s3.amazonaws.com/ki.js/54001/cOd.js"></script><script src="//www.googletagmanager.com/gtm.js?id=GTM-TSRZ3G" type="text/javascript" async=""></script><script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflhiN9BI/www-widgetapi.js" async=""></script><script type="application/ld+json">[{"@context":"http://schema.org","@type":"Park","name":"Honeymoon Island State Park","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Park","name":"Caladesi Island State Park","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Beach","name":"Clearwater Beach","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Park","name":"Sand Key Park","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Beach","name":"Belleair Beach","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Beach","name":"Indian Rocks Beach","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Beach","name":"North Redington Beach","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Beach","name":"Madeira Beach","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Place","name":"Treasure Island","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Beach","name":"St. Pete Beach","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Beach","name":"Pass-a-Grille Beach","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}},{"@context":"http://schema.org","@type":"Park","name":"Fort De Soto Park","image":"","@id":"","url":"","telephone":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","postalCode":"","addressCountry":""}}]</script>
+<link href="https://www.visitstpeteclearwater.com/es/que-hacer/playas?utm_campaign=fy20brand&amp;utm_source=omnivirt&amp;utm_medium=display&amp;utm_content=beaches" rel="alternate" hreflang="es">
+<link href="https://www.visitstpeteclearwater.com/br/que-fazer/praias?utm_campaign=fy20brand&amp;utm_source=omnivirt&amp;utm_medium=display&amp;utm_content=beaches" rel="alternate" hreflang="pt-br">
+<link href="https://www.visitstpeteclearwater.com/de/sehenswuerdigkeiten-aktivitaeten/strande?utm_campaign=fy20brand&amp;utm_source=omnivirt&amp;utm_medium=display&amp;utm_content=beaches" rel="alternate" hreflang="de">
+<link href="https://www.visitstpeteclearwater.com/things-to-do/beaches?utm_campaign=fy20brand&amp;utm_source=omnivirt&amp;utm_medium=display&amp;utm_content=beaches" rel="alternate" hreflang="en">
+<link rel="apple-touch-icon" href="/sites/all/themes/mmg_vspc/images/apple-touch-icon-72x72.png" sizes="72x72">
+<meta name="p:domain_verify" content="7f1627d8e80a1eaed65357acd8861b54">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Find your happy place on America's Best Beaches! Come explore the white-sand beaches of Florida's Gulf Coast.">
+<meta name="twitter:image" content="https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_honeymoon.jpg">
+<meta name="twitter:site" content="@vspc">
+<meta property="og:url" content="//www.visitstpeteclearwater.com/things-to-do/beaches">
+<meta property="og:title" content="Feel It On Florida's Best Beaches">
+<meta property="og:description" content="Find your happy place on America's Best Beaches! Come explore the white-sand beaches of Florida's Gulf Coast.">
+<meta property="og:image" content="https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_honeymoon.jpg">
+<meta property="og:site_name" content="Visit St.Pete/Clearwater">
+<meta property="og:type" content="website">
+  <title>Beaches | Visit St Petersburg Clearwater Florida</title>
+  <link type="text/css" rel="stylesheet" href="https://www.visitstpeteclearwater.com/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://www.visitstpeteclearwater.com/sites/default/files/css/css_DHcXHPYBSjIVaCQZEG4ZlpLkvslnFlBCnQUCzlbRBio.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://www.visitstpeteclearwater.com/sites/default/files/css/css_016UY9oke3YDMSc1lNQsd3c8Xn86i__bvjXsvA0gyBc.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" media="all">
+<link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://www.visitstpeteclearwater.com/sites/default/files/css/css_NrwPA2Nk7S3aUbSTSn3FgeClYrzTMZHzoxXBfciqq84.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://www.visitstpeteclearwater.com/sites/default/files/css/css_uKFamVdS0ibXL5aXr8mqFAGNad0fCYJSZ1a_TQECCsQ.css" media="all">
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_kwfUyTwE_jdSpvMYMvOKt8vJ5VhfhFia41HrcFD6-dg.js"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_UsJCaTKadQHcBxW3InvotRkwEO94ieAIN0hsSq5sbL4.js"></script>
+<script type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2019102401.js?21065049" id="gpt-impl-0.4417284821547345"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.sync.js?domain=www.visitstpeteclearwater.com" as="script"><script src="https://adservice.google.com/adsid/integrator.sync.js?domain=www.visitstpeteclearwater.com"></script><script>processGoogleTokenSync({"newToken":"FBS"},5);</script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_s3L_uC35AiN5EGYY533su-jccnLRp2aKpOnjgPLbo34.js"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_AlP7fsD8xxkYk6zrgcC0VqiHe2SBVenZxSQgPeob2ag.js"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_41ocKX4qGuw8Uw9jLtSKbwVL8Pojc3kNTpLnbPcPS0I.js"></script>
+<script type="text/javascript" src="//cdn.getsmartcontent.com/WK83VN2F.js"></script><style type="text/css" id="gsc-css-WK83VN2F">.gsc-flyin{background-color:#fff;display:none;position:fixed;z-index:11}.gsc-flyin.gsc-flyin-visible{display:block}.gsc-flyin.gsc-flyin-setting-dimensions{display:block;left:-9999px}.gsc-flyin .gsc-image{height:auto;max-width:100%}.gsc-flyin-close-btn{cursor:pointer;position:absolute;right:5px;top:5px;background:none;border:none}</style><script src="https://s.getsmartcontent.com/serving?tm=1572634050&amp;rv=d04aac60-f74d-11e9-94bf-5d3675951f64&amp;i=me32uwz1ci4e4uiyxhyxx6sjeyomxror&amp;loc=https%3A%2F%2Fwww.visitstpeteclearwater.com%2Fthings-to-do%2Fbeaches%3Futm_campaign%3Dfy20brand%26utm_source%3Domnivirt%26utm_medium%3Ddisplay%26utm_content%3Dbeaches&amp;w=WK83VN2F&amp;c=XFGN3V0M%2CS161V5NT%2CL6V052XS%2C4FBFW391&amp;v=1572634050.1572634050.1572634050.1&amp;s=me32uwz1ci4e4uiyxhyxx6sjeyomxror.1572634050&amp;d=1680%2C846&amp;ab=&amp;r=&amp;m.eg=&amp;lvc=&amp;lvcr=&amp;dl=%7B%7D"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_m0fq3WHEYFasNoHSyEBLRogOjMt5IfZSBRnzeRE8klY.js"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_-hGBr_BYulV5EprlAoTtE8KirHxvpswjjKnOT6Kfbv8.js"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/all/themes/mmg_vspc/js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/all/themes/mmg_vspc/js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_MDeKhI2QP7Cwj4n0fcQ8TsR0Q91fxrVa7SJaehmssPM.js"></script>
+
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_dymAfc-aRyiTelBedxN9YPnloFc2NsKvE3I77SQKszk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+Drupal.body={a:['html','not-front','not-logged-in','one-sidebar','sidebar-second','page-node','page-node-','page-node-36959','node-type-itinerary'],l:9,readClass:function(){this.a=jQuery('body').attr('class').split(' ');this.l=this.a.length},hasClass:function(needle){if(!this.l){this.readClass()}if(!this.l){return false}for(var i=0;i<this.l;i++){if(this.a[i]==needle)return true}return false},addClass:function(needle){jQuery('body').addClass(needle);if(this.hasClass(needle)){return}this.a.push(needle);this.l++},removeClass:function(needle){jQuery('body').removeClass(needle);if(this.hasClass(needle)){for(var i=0;i<this.l;i++){if(this.a[i]==needle){this.a.splice(i,1)}}this.l--}}};
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_S8QiiCCScwzRmzzg2dg4P2SYAuKfJ4J8SbKW-f6LrGo.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAsjtN8-LEX0qA77511nhlfCIFdU9jPk0c"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_SAozJmsDVwfV4fF3IMUGuEwdeyykF-hPJSkkZgpKAoI.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&amp;key=AIzaSyAsjtN8-LEX0qA77511nhlfCIFdU9jPk0c&amp;libraries=geometry,"></script>
+<script type="text/javascript" src="https://www.visitstpeteclearwater.com/sites/default/files/js/js_oGH01y53SPe0hOhtVnZjRXAV1jG3cjEEbT7b7QcrVCU.js"></script>
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","countryCode":"US","ajaxPageState":{"theme":"mmg_vspc","theme_token":"YZxz_-l5aZfTaVco-uuujr7uzQEem-0qgHP1TdbiMgs","jquery_version":"1.7","js":{"sites\/all\/themes\/mmg_vspc\/js\/jquery.cycle2.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/jquery.cycle2.carousel.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/jquery.cycle2.swipe.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/jquery.cycle2.center.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/jquery.stellar.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/site.js":1,"\/\/siteimproveanalytics.com\/js\/siteanalyze_6151854.js":1,"sites\/all\/modules\/features\/vspc_beaches_page\/js\/vspc-beaches.js":1,"sites\/all\/themes\/mmg_vspc\/js\/scrollmagic\/js\/lib\/modernizr.custom.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/scrollmagic\/js\/lib\/greensock\/TweenMax.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/scrollmagic\/scrollmagic\/minified\/ScrollMagic.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/scrollmagic\/scrollmagic\/minified\/plugins\/animation.gsap.min.js":1,"sites\/all\/themes\/mmg_vspc\/js\/scrollmagic\/scrollmagic\/minified\/plugins\/debug.addIndicators.min.js":1,"profiles\/mmg_custom\/modules\/custom\/mmg_globals\/hookJS.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"0":1,"https:\/\/www.googletagservices.com\/tag\/js\/gpt.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.effect.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/jquery.ba-bbq.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/contrib\/ajax_pagination\/ajax_pagination.js":1,"sites\/all\/modules\/features\/mmg_crowdriff\/js\/mmg-crowdriff.js":1,"sites\/all\/modules\/features\/night_images\/js\/night-images.js":1,"sites\/all\/modules\/features\/vspc_best_of\/js\/vspc-best-of.js":1,"sites\/all\/modules\/custom\/vspc_expedia_search\/js\/vspc.expedia.js":1,"sites\/all\/modules\/features\/vspc_grid_asset\/vspc_grid_asset.js":1,"sites\/all\/modules\/features\/vspc_webcams\/js\/vspc-webcams.js":1,"1":1,"\/\/cdn.getsmartcontent.com\/WK83VN2F.js":1,"sites\/all\/themes\/mmg_vspc\/js\/cookieconsent.min.js":1,"\/\/assets.pinterest.com\/js\/pinit.js":1,"2":1,"profiles\/mmg_custom\/modules\/contrib\/apachesolr_autocomplete\/jquery-autocomplete\/jquery.autocomplete.js":1,"\/sites\/all\/themes\/mmg_vspc\/js\/imagesloaded.pkgd.min.js":1,"\/sites\/all\/themes\/mmg_vspc\/js\/masonry.pkgd.min.js":1,"misc\/progress.js":1,"profiles\/mmg_custom\/modules\/contrib\/ctools\/js\/modal.js":1,"sites\/all\/modules\/features\/vspc_beach_conditions\/js\/vspc_beach_conditions.js":1,"3":1,"sites\/all\/modules\/custom\/mmg_trip_favorites\/js\/mmg-trip-favorites.js":1,"4":1,"sites\/all\/modules\/features\/vspc_itineraries\/js\/imagesloaded.pkgd.min.js":1,"https:\/\/maps.google.com\/maps\/api\/js?key=AIzaSyAsjtN8-LEX0qA77511nhlfCIFdU9jPk0c":1,"sites\/all\/modules\/features\/vspc_itineraries\/js\/openlayers\/ol.js":1,"https:\/\/maps.google.com\/maps\/api\/js?v=3\u0026key=AIzaSyAsjtN8-LEX0qA77511nhlfCIFdU9jPk0c\u0026libraries=geometry,":1,"sites\/all\/modules\/features\/vspc_itineraries\/js\/jquery.gifstuff.js":1,"sites\/all\/modules\/features\/vspc_itineraries\/js\/openlayers\/ol3gm.js":1,"sites\/all\/modules\/features\/vspc_itineraries\/js\/vspc-google-map.js":1,"sites\/all\/modules\/features\/vspc_itineraries\/js\/vspc-itineraries-olmap.js":1,"https:\/\/www.youtube.com\/iframe_api":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/features\/mmg_crowdriff\/css\/mmg-crowdriff.css":1,"sites\/all\/modules\/features\/night_images\/css\/night-images.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/features\/vspc_best_of\/css\/vspc-best-of.css":1,"sites\/all\/modules\/features\/vspc_circle_link\/css\/vspc-circle-link.css":1,"sites\/all\/modules\/features\/vspc_fun_facts\/css\/vspc-fun-facts.css":1,"sites\/all\/modules\/features\/vspc_image_slider\/css\/vspc-image-slider.css":1,"sites\/all\/modules\/custom\/vspc_quotes\/css\/vspc-quotes.css":1,"sites\/all\/modules\/features\/vspc_sliding_block\/css\/vspc-sliding-block.css":1,"sites\/all\/modules\/features\/vspc_social_quotes\/css\/vspc-quotes.css":1,"sites\/all\/modules\/features\/vspc_webcams\/css\/vspc-webcams.css":1,"sites\/all\/modules\/contrib\/asset\/css\/assets.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"https:\/\/fonts.googleapis.com\/css?family=Oswald:300,400,700":1,"\/\/maxcdn.bootstrapcdn.com\/font-awesome\/4.3.0\/css\/font-awesome.min.css":1,"sites\/all\/themes\/mmg_vspc\/stylesheets\/cookieconsent.min.css":1,"profiles\/mmg_custom\/modules\/contrib\/apachesolr_autocomplete\/apachesolr_autocomplete.css":1,"profiles\/mmg_custom\/modules\/contrib\/apachesolr_autocomplete\/jquery-autocomplete\/jquery.autocomplete.css":1,"profiles\/mmg_custom\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/features\/pano_video\/css\/pano-video.css":1,"profiles\/mmg_custom\/modules\/contrib\/ctools\/css\/modal.css":1,"sites\/all\/modules\/custom\/mmg_trip_favorites\/css\/mmg-trip-favorites.css":1,"sites\/all\/modules\/features\/vspc_itineraries\/css\/vspc-itineraries.css":1,"sites\/all\/modules\/features\/vspc_beaches_page\/css\/vspc-beaches.css":1,"sites\/all\/themes\/mmg_vspc\/stylesheets\/twentytwenty.css":1,"sites\/all\/themes\/mmg_vspc\/stylesheets\/style.css":1}},"apachesolr_autocomplete":{"path":"\/apachesolr_autocomplete"},"mmg_crowdriff_extra_images":[],"mmg_trip_favorites":{"count":0},"urlIsAjaxTrusted":{"\/things-to-do\/beaches?utm_campaign=fy20brand\u0026utm_source=omnivirt\u0026utm_medium=display\u0026utm_content=beaches":true},"CToolsModal":{"loadingText":"Loading...","closeText":"Close Window","closeImage":"\u003Cimg src=\u0022https:\/\/www.visitstpeteclearwater.com\/profiles\/mmg_custom\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E","throbber":"\u003Cimg src=\u0022https:\/\/www.visitstpeteclearwater.com\/profiles\/mmg_custom\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E"},"trip-favorites-modal":{"modalSize":{"type":"fixed","width":450,"height":275}},"better_exposed_filters":{"views":{"itinerary_items":{"displays":{"default":{"filters":[]}}}}},"language":"en","google_map_api_key":"AIzaSyAsjtN8-LEX0qA77511nhlfCIFdU9jPk0c","pageTitle":"Beaches"});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  <div class="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+      
+<!-- header.tpl.php -->
+<section id="header">
+	<i id="burger" class="fa fa-bars"></i>
+	<div id="social">
+		<div class="row remove-bottom">
+			<!--<div class="sixteen columns">-->
+
+			<a class="site-logo" title="Visit St Petersburg Clearwater Florida" href="/"><img class="logo mobile" src="https://www.visitstpeteclearwater.com/sites/all/themes/mmg_vspc/images/vspc-logo.png" alt="Visit St Petersburg Clearwater Florida"></a>
+			<a class="site-logo" title="Visit St Petersburg Clearwater Florida" href="/"><img class="logo" src="https://www.visitstpeteclearwater.com/sites/all/themes/mmg_vspc/images/vspc-logo.png" alt="Visit St Petersburg Clearwater Florida"></a>
+
+			<div class="push-right">
+								<span class="sit-links">
+          <!--<a href=""></a> |-->
+          <span class="mmg-trip-favorites-link jquery-once-1-processed"><a aria-label="Add this to your trip favorites" href="/trip-favorites"><i aria-hidden="true" class="fa fa-star"></i> Trip Favorites</a> | </span>
+          <!--<a href=""></a> |
+          <a href=""></a> |-->
+          <a aria-label="Subscribe to our eNewsletter" href="https://www.visitstpeteclearwater.com/form/newsletter-sign-up">eNewsletter</a>
+           |
+          <a aria-label="Get a free destination magazine" href="https://www.visitstpeteclearwater.com/form/free-destination-magazine">FREE Destination Magazine</a>
+                  </span>
+				<div class="vspc-search-form desktop"><form action="https://www.visitstpeteclearwater.com/things-to-do/beaches?utm_campaign=fy20brand&amp;utm_source=omnivirt&amp;utm_medium=display&amp;utm_content=beaches" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." class="apachesolr-autocomplete unprocessed form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128">
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input alt="Search" type="submit" id="edit-submit" name="op" value="" class="form-submit"></div><input type="hidden" name="form_build_id" value="form-ilm1c-cQiE-fm5MZSqNryWcB4wGODH2Qvq0vSxXm860">
+<input type="hidden" name="form_id" value="search_block_form">
+</div>
+</div></form></div>
+			</div>
+
+		</div> <!--row-->
+	</div> <!--social-->
+
+		<nav>
+		<div class="vspc-search-form"><form action="/things-to-do/beaches?utm_campaign=fy20brand&amp;utm_source=omnivirt&amp;utm_medium=display&amp;utm_content=beaches" method="post" id="search-block-form--2" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--4">Search </label>
+ <input title="Enter the terms you wish to search for." class="apachesolr-autocomplete unprocessed form-text" type="text" id="edit-search-block-form--4" name="search_block_form" value="" size="15" maxlength="128">
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2"><input alt="Search" type="submit" id="edit-submit--2" name="op" value="" class="form-submit"></div><input type="hidden" name="form_build_id" value="form-m_QR8J1dYHEjD4hAfvryDEudjW1dcRkBkUGbqD5Afqk">
+<input type="hidden" name="form_id" value="search_block_form">
+</div>
+</div></form></div>
+				<ul class="menu"><li class="first expanded"><a href="/things-to-do" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do" class="notranslate">Things To Do</a><ul><li class="first leaf"><div class="menu-attach-block-wrapper orientation-horizontal">
+  
+<!-- menu_mega_things.tpl.php -->
+<div id="block-local-blocks-menu-mega-things" class="block block-local-blocks">
+
+    
+  <div class="content">
+    <div class="container">
+		<div class="four columns alpha">
+		<a href="/list/best-ever-spc" data-track-label="/list/best-ever-spc" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/tarpon-springs-9613.jpg?itok=U-fOKwDn" width="302" height="302" alt="Best Ever SPC">			From quirky attractions to delicious dining spots and fabulous events – check out our video series on the "Best of SPC!"		</a>
+	</div>
+		<div class="four columns alpha">
+		<a href="/best-things-to-do-clearwater-beach" data-track-label="/best-things-to-do-clearwater-beach" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/clearwater_beach_drone_aug2019_1.jpg?itok=OKfZ_PA5" width="302" height="302" alt="Best Things to Do in Clearwater Beach">			There’s so much more to explore in and around Clearwater. Check out our guide to get started!		</a>
+	</div>
+		<div class="four columns alpha">
+		<a href="/video/floating-tiki-hut-all-aboard" data-track-label="/video/floating-tiki-hut-all-aboard" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/johns-pass-web.jpg?itok=m6asnKfr" width="302" height="302" alt="Johns Pass Village" title="Johns Pass Village">			<p>What's better than a tiki bar? A floating tiki hut! All aboard with Florida Tiki Tours!</p>		</a>
+	</div>
+	
+</div>
+  </div>
+</div>
+<!-- /menu_mega_things.tpl.php -->
+</div>
+</li>
+<li class="leaf"><a href="/things-to-do/arts-culture" title="Arts &amp; Culture" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/arts-culture" class="notranslate">Arts &amp; Culture</a></li>
+<li class="leaf"><a href="/things-to-do/attractions" title="Attractions" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/attractions" class="notranslate">Attractions</a></li>
+<li class="leaf"><a href="/things-to-do/beaches" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/beaches" class="notranslate active">Beaches</a></li>
+<li class="leaf"><a href="/things-to-do/boating-watersports" title="Boating &amp; Watersports" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/boating-watersports" class="notranslate">Boating &amp; Watersports</a></li>
+<li class="leaf"><a href="https://www.visitstpeteclearwater.com/gulp-coast-craft-beer-trail" title="" data-track-category="Navigation" data-track-action="click" data-track-label="http://www.visitstpeteclearwater.com/gulp-coast-craft-beer-trail" class="notranslate">Craft Breweries</a></li>
+<li class="leaf"><a href="/dive-into-the-gulf" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/dive-into-the-gulf" class="notranslate">Dive Into The Gulf</a></li>
+<li class="leaf"><a href="/things-to-do/events-festivals" title="Events &amp; Festivals" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/events-festivals" class="notranslate">Events &amp; Festivals</a></li>
+<li class="leaf"><a href="/central-ave" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/central-ave" class="notranslate">Experience Central Ave</a></li>
+<li class="leaf"><a href="/things-to-do/fishing" title="Fishing" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/fishing" class="notranslate">Fishing</a></li>
+<li class="leaf"><a href="/things-to-do/lgbtq" title="LGBTQ+" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/lgbtq" class="notranslate">LGBTQ+</a></li>
+<li class="leaf"><a href="/things-to-do/museums" title="Museums" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/museums" class="notranslate">Museums</a></li>
+<li class="leaf"><a href="/things-to-do/sports" title="Sports" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/sports" class="notranslate">Sports</a></li>
+<li class="last leaf"><a href="/things-to-do" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do" class="notranslate">See More Things to Do</a></li>
+</ul></li>
+<li class="leaf"><a href="/things-to-do/beaches" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/beaches" class="notranslate active">Beaches</a></li>
+<li class="expanded"><a href="/communities" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/communities" class="notranslate">Communities</a><ul><li class="first leaf"><div class="menu-attach-block-wrapper orientation-horizontal">
+  
+<!-- menu_mega_communities.tpl.php -->
+<div id="block-local-blocks-menu-mega-communities" class="block block-local-blocks">
+
+    
+  <div class="content">
+    <div class="container">
+		<div class="four columns alpha">
+		<a href="/photo-tour/fall-tour-of-st-pete-clearwater" data-track-label="/photo-tour/fall-tour-of-st-pete-clearwater" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/sittingbythefirelgbt-visitst.petersburgclearwater-.jpg?itok=mJOdfkcZ" width="302" height="302" alt="Fall Tour of St. Pete / Clearwater">			<p>Take a Fall Photo Tour of St. Pete / Clearwater</p>		</a>
+	</div>
+		<div class="four columns alpha">
+		<a href="/list/st-pete-clearwater-markets" data-track-label="/list/st-pete-clearwater-markets" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/outdoor-markets-preview.jpg?itok=_q3KR5iB" width="302" height="302" alt="outdoor-markets-preview">			<p>Find local fare and tasty treasures at these popular open-air markets.</p>		</a>
+	</div>
+		<div class="four columns alpha">
+		<a href="/video-series/st-peteclearwaters-top-chefs-and-restaurants" data-track-label="/video-series/st-peteclearwaters-top-chefs-and-restaurants" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/19vspc_diningseries_heropreview_1625x580_0.jpg?itok=QAKQfR-z" width="302" height="302" alt="dining series" title="dining series">			A video series to celebrate some of the best chefs and restaurant hot spots in town.		</a>
+	</div>
+	</div>
+  </div>
+</div>
+<!-- /menu_mega_communities.tpl.php -->
+</div>
+</li>
+<li class="leaf"><a href="/communities/clearwater-beach" title="Clearwater Beach" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/clearwater-beach" class="notranslate">Clearwater Beach</a></li>
+<li class="leaf"><a href="/communities/dunedin" title="Dunedin" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/dunedin" class="notranslate">Dunedin</a></li>
+<li class="leaf"><a href="/communities/gulfport" title="Gulfport" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/gulfport" class="notranslate">Gulfport</a></li>
+<li class="leaf"><a href="/communities/madeira-beach" title="Madeira Beach" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/madeira-beach" class="notranslate">Madeira Beach</a></li>
+<li class="leaf"><a href="/communities/oldsmar" title="Oldsmar" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/oldsmar" class="notranslate">Oldsmar</a></li>
+<li class="leaf"><a href="/communities/safety-harbor" title="Safety Harbor" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/safety-harbor" class="notranslate">Safety Harbor</a></li>
+<li class="leaf"><a href="/communities/st-pete-beach" title="St. Pete Beach" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/st-pete-beach" class="notranslate">St. Pete Beach</a></li>
+<li class="leaf"><a href="/communities/st-petersburg" title="St. Petersburg" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/st-petersburg" class="notranslate">St. Petersburg</a></li>
+<li class="leaf"><a href="/communities/tarpon-springs" title="Tarpon Springs" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/tarpon-springs" class="notranslate">Tarpon Springs</a></li>
+<li class="leaf"><a href="/communities/treasure-island" title="Treasure Island" data-track-category="Navigation" data-track-action="click" data-track-label="/communities/treasure-island" class="notranslate">Treasure Island</a></li>
+<li class="last leaf"><a href="/communities" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/communities" class="notranslate">See More Communities</a></li>
+</ul></li>
+<li class="leaf"><a href="/content" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/content" class="notranslate">Trip Ideas</a></li>
+<li class="leaf"><a href="/things-to-do/places-to-stay" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/places-to-stay" class="notranslate">Places To Stay</a></li>
+<li class="last expanded"><a href="/things-to-do/dining-nightlife" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/dining-nightlife" class="notranslate">Dining &amp; Nightlife</a><ul><li class="first leaf"><div class="menu-attach-block-wrapper orientation-horizontal">
+  
+<!-- menu_mega_dining.tpl.php -->
+<div id="block-local-blocks-menu-mega-dining" class="block block-local-blocks">
+
+    
+  <div class="content">
+    <div class="container">
+		<div class="four columns alpha">
+		<a href="/video-series/st-peteclearwaters-top-chefs-and-restaurants" data-track-label="/video-series/st-peteclearwaters-top-chefs-and-restaurants" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/19vspc_diningseries_heropreview_1625x580_0.jpg?itok=QAKQfR-z" width="302" height="302" alt="dining series" title="dining series">			A video series to celebrate some of the best chefs and restaurant hot spots in town.		</a>
+	</div>
+		<div class="four columns alpha">
+		<a href="/video/yoga-on-tap-3-daughters-brewing-co" data-track-label="/video/yoga-on-tap-3-daughters-brewing-co" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/3-daughters-brewing-st-petersburg-florida.jpg?itok=quDltbWa" width="302" height="302" alt="3 Daughters Brewing St. Pete Florida" title="3 Daughters Brewing St. Pete Florida">			<p>Relax and recharge during Yoga on Tap with Body Electric Co. at 3 Daughters Brewing.</p>		</a>
+	</div>
+		<div class="four columns alpha">
+		<a href="/list/st-pete-restaurant-renaissance" data-track-label="/list/st-pete-restaurant-renaissance" data-track-action="click" data-track-category="Mega Menu">
+			<img src="https://www.visitstpeteclearwater.com/sites/default/files/styles/mega-menu/public/readingroom-npcc.jpg?itok=4wEJ4uJQ" width="302" height="302" alt="St. Pete Restaurant Renaissance">			<p>Check out these new St. Pete restaurants&nbsp;that offer everything from high-end fusion to local seafood.</p>		</a>
+	</div>
+	
+</div>
+  </div>
+</div>
+<!-- /menu_mega_dining.tpl.php -->
+</div>
+</li>
+<li class="leaf"><a href="/video-series/st-peteclearwaters-top-chefs-and-restaurants" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/video-series/st-peteclearwaters-top-chefs-and-restaurants" class="notranslate">Top Chefs and Restaurants</a></li>
+<li class="leaf"><a href="/gulp-coast-craft-beer-trail" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/gulp-coast-craft-beer-trail" class="notranslate">Craft Breweries</a></li>
+<li class="leaf"><a href="/central-ave" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/central-ave" class="notranslate">Experience Central Ave</a></li>
+<li class="leaf"><a href="/list/dance-clubs-nightclubs-and-lounges" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/list/dance-clubs-nightclubs-and-lounges" class="notranslate">Nightlife</a></li>
+<li class="last leaf"><a href="/things-to-do/dining-nightlife" title="" data-track-category="Navigation" data-track-action="click" data-track-label="/things-to-do/dining-nightlife" class="notranslate">See More Dining &amp; Nightlife</a></li>
+</ul></li>
+</ul>		<ul class="sit-links">
+      <li><a href="/current-beach-conditions"><i aria-hidden="true" class="fa fa-info-circle"></i> Beach Conditions</a></li>
+      <li><a class="mmg-trip-planner-link" href="/trip-favorites"><i aria-hidden="true" class="fa fa-star"></i> Trip Favorites</a></li>
+      <li><a href="/whats-new"><i aria-hidden="true" class="fa fa-question-circle"></i> What's New</a></li>
+      <li><a href="/360-videos"><i aria-hidden="true" class="fa vspcicon-360-camera"></i> 360° Videos</a></li>
+      <li><a href="/social-hub"><i aria-hidden="true" class="fa fa-share-alt"></i> Social Hub</a></li>
+      			<li><a href="/form/free-destination-magazine"><i aria-hidden="true" class="fa fa-book"></i> Order Your Free Destination Magazine</a></li>
+      			<li><a href="/form/newsletter-sign-up"><i aria-hidden="true" class="fa fa-envelope"></i> Sign Up For Our eNewsletter</a></li>
+			<li><a href="/travel-deals-discounts-0"><i aria-hidden="true" class="fa fa-tags"></i> Get Deals</a></li>
+		</ul>
+	</nav>
+	</section>
+
+<!-- /header.tpl.php -->
+
+  
+<div class="beach-loader">
+  <!--
+  <div class="beer-loading-text">Your Gulp Coast adventure is brewing...</div>
+  <div class="beer-loader-sprites">
+    <h2 id="beer-loading-text"></h2>
+    <img id="beer-loading-animation" height="350" src="/sites/all/modules/features/vspc_itineraries/images/beer-loading.png"
+         data-gif="/sites/all/modules/features/vspc_itineraries/images/beer-loading.gif"/>
+  </div>
+  -->
+</div>
+<section id="article-header" style="background: black;">
+  <video muted="" playsinline="" autoplay="" style="opacity: 1;" loop="" src="https://www.visitstpeteclearwater.com/sites/default/files/vspc18_beach_hero_final.mp4"><source src="" type="video/mp4"></video>
+  <h1>Beaches</h1>
+</section>
+
+  <section id="content" class="uncontained">
+    <div class="container">
+      <div class="row remove-bottom">
+                <div class="nine columns">
+                                <div class="tabs">
+                          </div>
+                              
+                  <a name="main-content"></a>
+              <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <article id="node-36959" class="node node-itinerary full clearfix gsc-campaign gsc-campaign-L6V052XS gsc-content-VL6TLT4R" style="visibility: visible;"><h2>Let’s Go! This Way to Beautiful Beaches</h2><p>With two of TripAdvisor's top beaches in the U.S. located here in St. Pete/Clearwater, it's easy to plan your perfect vacation in paradise.  With 35 miles of white sand bliss to choose from, you’ll find an island-style vacation without leaving the U.S. Scroll down to learn more about <a href="/communities/clearwater-beach" class="gsc-track gsc-tracking-code-OTIxLjE3NTQxLjAuMTY5NzMzLjA=" data-gsc="OTIxLjE3NTQxLjAuMTY5NzMzLjA=">Clearwater Beach</a>, TripAdvisor's No. 1 beach in the U.S. in 2019 (and in 2018 and 2016, too!). Discover more about <a href="/communities/st-pete-beach" class="gsc-track gsc-tracking-code-OTIxLjE3NTQxLjAuMTY5NzMzLjA=" data-gsc="OTIxLjE3NTQxLjAuMTY5NzMzLjA=">St. Pete Beach</a>, TripAdvisor's No. 4 beach in the U.S. in 2019. Or click on the map pins to find white sugar sands, old Florida vibes and untouched natural beauty in the American Tropics!</p><p>    To discover even more ways to enjoy our beautiful beaches and waterways, <a href="https://www.visitstpeteclearwater.com/dive-into-the-gulf" class="gsc-track gsc-tracking-code-OTIxLjE3NTQxLjAuMTY5NzMzLjA=" data-gsc="OTIxLjE3NTQxLjAuMTY5NzMzLjA=">dive in here.</a></p></article>
+
+
+  </div>
+</div><!-- sharethis.tpl.php -->
+                  <div class="seven columns" style="">
+              <div data-scrollmagic-pin-spacer="" class="scrollmagic-pin-spacer" style="top: auto; left: auto; bottom: auto; right: auto; margin: 0px; display: flex; position: absolute; box-sizing: content-box; width: 270px; height: 846px;"><div class="region region-sidebar-second pinned" style="position: fixed; margin: auto; top: 0px; left: 880.469px; bottom: auto; right: auto;">
+    
+
+<div id="block-vspc-beaches-page-vspc-beaches-page-google-btn" class="block block-vspc-beaches-page">
+
+    
+  <div class="content">
+    <a href="javascript:void(0)" class="itineraryMapToggleButton jquery-once-1-processed">
+  <span class="opener button">Explore the Map <em class="fa fa-arrow-circle-right">&nbsp;</em></span>
+</a>
+  </div>
+</div>  </div></div>
+          </div> <!--four column-->
+              </div> <!--row-->
+
+    </div><!-- container -->
+  </section>
+
+  <div id="post-content-components" class="clearfix">
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item first" data-beach="Honeymoon Island State Park" data-lat="28.0608835404745" data-lng="-82.8298008441925" data-heading="90">
+  <div class="beachBg in-view" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_honeymoon.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-honeymoon-island-state-park" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Honeymoon Island State <span class="lastword"> Park<i class="vspcicon honeymoon-island-state-park"></i></span></h2>
+            <div class="description"><p>This undeveloped 385-acre barrier island off Dunedin has four miles of sandy beaches, hiking trails and bird-watching opportunities along the Osprey Trail. Upon arriving, visit the Rotary Centennial Nature Center to learn about the island. Swim, hike, bike, kayak, or simply relax.</p><p><strong>Top Tip:</strong> Honeymoon Island boasts one of the prettiest dog beaches around!</p></div>
+            <a href="/profile/honeymoon-island-state-park/1023" class="button smaller white">Discover Honeymoon Island State Park</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/honeymoon-island-state-park.jpg?itok=WCAnQBft&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss:</strong> Enjoy outdoor activities along this serene, undeveloped beach like shelling, kayaking in St. Joseph’s Sound, and playing with Fido on the popular dog beach.</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-166-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-166-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/honeymoon-island-state-park.jpg?itok=WCAnQBft&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> Enjoy outdoor activities along this serene, undeveloped beach like shelling, kayaking in St. Joseph’s Sound, and playing with Fido on the popular dog beach.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-honeymoon1.jpg?itok=uV2wqjfW&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss:</strong> Hiking along the long stretch of beaches.&nbsp;</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/heron-on-honeymoon-island.jpg?itok=EGUWLkty&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> Part of the Great Florida Birding &amp; Wildlife Trail, Honeymoon Island is perfect for taking in nature. Keep an eye out for osprey nests and shorebirds.</p>
+</div></div></div>
+  </div></div>
+      </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Caladesi Island State Park" data-lat="28.032314611126" data-lng="-82.82254815101624" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_caladesi_0.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-caladesi-island-state-park" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Caladesi Island State <span class="lastword"> Park<i class="vspcicon caladesi-island-state-park"></i></span></h2>
+            <div class="description"><p>Caladesi landed on Dr. Beach's list of Top 10 Beaches in both 2019 and 2016, and was voted No. 6 Best Beach in Florida by USA Today in 2015. The island is accessible only by boat—ride the ferry from Honeymoon Island, or rent a kayak and tour the mangrove trails. Natural beauty meets modern amenities with an on-site concession, showers and changing rooms.&nbsp;</p><p><strong>Top Tip:</strong> Bring beach chairs and a cooler, or rent a beachside cabana.</p></div>
+            <a href="/profile/caladesi-island-state-park/331" class="button smaller white">Discover Caladesi Island State park</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-caladesi3.jpg?itok=qGm71pYD&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss:</strong> The unspoiled sandy beach with views of the Gulf of Mexico. Get a taste in our <a href="https://www.visitstpeteclearwater.com/video/caladesi-island-state-park" style="visibility: hidden;">Caladesi Island video</a>.</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-164-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-164-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-caladesi3.jpg?itok=qGm71pYD&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> The unspoiled sandy beach with views of the Gulf of Mexico. Get a taste in our <a href="https://www.visitstpeteclearwater.com/video/caladesi-island-state-park">Caladesi Island video</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/caladesi-island.jpg?itok=Yu59hl53&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> This uninhabited barrier island—only accessible by ferry—is a perfect spot for <a href="https://www.visitstpeteclearwater.com/list/camping-beach">camping on the beach</a>, and features amenities like a café, rental shop, showers, bathrooms and grills.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-caladesi2.jpg?itok=GFe76bFy&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> The four-mile-long <a href="https://www.visitstpeteclearwater.com/video/kayaking-waters">kayaking trail</a> through mangroves; exit the trail and finish your journey kayaking through the Gulf.</p>
+</div></div></div>
+  </div></div>
+      </div>
+              <div class="itinerary-region-video">
+          <div class="video-holder">
+            <a href="javascript:void(0)" class="youtube-play"><span class="play-button"><i aria-hidden="true" class="fa fa-play"></i></span><img src="https://img.youtube.com/vi/YznrHdKof64/hqdefault.jpg" alt="Play Video"></a>
+            <iframe id="YznrHdKof64" src="https://www.youtube.com/embed/YznrHdKof64?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;listType=search" allow="autoplay" frameborder="0" allowfullscreen="" data-gtm-yt-inspected-642806_275="true" data-gtm-yt-inspected-642806_291="true" data-gtm-yt-inspected-642806_412="true"></iframe>
+          </div>
+          <div class="video-caption">Caladesi Island State Park</div>
+        </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Clearwater Beach" data-lat="27.977499" data-lng="-82.82862799999998" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_clearwater.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-clearwater-beach" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Clearwater <span class="lastword"> Beach<i class="vspcicon clearwater-beach"></i></span></h2>
+            <div class="description"><p>Fun-loving Clearwater Beach was voted the No. 1 beach in America by Trip Advisor in 2019, 2018 and 2016 (it was also named No. 6 in the world in 2019!). Wide sugar-sand beaches and emerald-clear surf dotted with dolphins make this an active beach scene. Soak in the sun, then dust off the sand and enjoy all this city-beach has to offer from downtown Beach Walk's shops, to waterfront restaurants like Frenchy's, and rooftop bars including Jimmy's Crow's Nest.&nbsp;</p></div>
+            <a href="https://www.visitstpeteclearwater.com/communities/clearwater-beach" class="button smaller white">Discover Clearwater Beach</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-clearwater1.jpg?itok=nscJIsKo&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don't Miss</strong>: Staying right on the beach in one of the brand-new resorts like <a href="/profile/opal-sands-resort/5662" style="visibility: hidden;">Opal Sands</a> or <a href="/profile/wyndham-grand-clearwater-beach/6676" style="visibility: hidden;">Wyndham Grand</a>.</p>
+</div></div></div>
+  </div>
+          
+
+
+
+          <a id="term-165-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-165-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-clearwater1.jpg?itok=nscJIsKo&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Staying right on the beach in one of the brand-new resorts like <a href="/profile/opal-sands-resort/5662">Opal Sands</a> or <a href="/profile/wyndham-grand-clearwater-beach/6676">Wyndham Grand</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-clearwater2.jpg?itok=of8R_BcH&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Burying your toes in the soft, sugary white sand that somehow doesn’t seem to get hot.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/pier-60-web.jpg?itok=_QhRxUyp&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Sunsets at Pier 60, a nightly gathering at this walkable entertainment area filled with crafters, buskers and live music. Stroll the pier while watching the sun sink into the Gulf.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 96; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/winter-the-dolphin.jpg?itok=cy0ETBcP&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: A particularly famous dolphin: Winter, the star of <em>Dolphin Tale</em> and <em>Dolphin Tale</em> 2, at <a href="https://www.visitstpeteclearwater.com/360-video/plan-visit-to-clearwater-marine-aquarium">Clearwater Marine Aquarium</a>.</p>
+</div></div></div>
+  </div></div>
+      </div>
+              <div class="itinerary-region-video">
+          <div class="video-holder">
+            <a href="javascript:void(0)" class="youtube-play"><span class="play-button"><i aria-hidden="true" class="fa fa-play"></i></span><img src="https://img.youtube.com/vi/G56nEEfDFyY/hqdefault.jpg" alt="Play Video"></a>
+            <iframe id="G56nEEfDFyY" src="https://www.youtube.com/embed/G56nEEfDFyY?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;listType=search" allow="autoplay" frameborder="0" allowfullscreen="" data-gtm-yt-inspected-642806_275="true" data-gtm-yt-inspected-642806_291="true" data-gtm-yt-inspected-642806_412="true"></iframe>
+          </div>
+          <div class="video-caption">Cruising Clearwater Beach</div>
+        </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Sand Key" data-lat="27.9575195367969" data-lng="-82.83226575102111" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_sandkey.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-sand-key" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Sand <span class="lastword"> Key<i class="vspcicon sand-key"></i></span></h2>
+            <div class="description"><p>If you prefer solitude with spectacular gulf views, quiet and romantic Sand Key Park is just a bridge away from the lively Clearwater Beach. Pack a picnic and set up camp at the tables on the north side of the island, or grab a fishing pole and kick back at this 95-acre county park with its wide beach, picnic pavilions and bathhouses. Explore the trails and boardwalk that winds through a salt marsh, and after a storm, collect shells along the shore.</p><p><strong>Top Tip:</strong> It’s super-easy to drive and park at this beach, with nearly 700 spaces and a daily parking fee of only $5.</p></div>
+            <a href="/profile/sand-key-park/1734" class="button smaller white">Discover Sand Key Park</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-sandkey3.jpg?itok=4IaBKTD_&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don't Miss</strong>: Snapping a selfie at this pristine paradise to make your friends jealous (and think you were on a secluded island).</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-171-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-171-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-sandkey3.jpg?itok=4IaBKTD_&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Snapping a selfie at this pristine paradise to make your friends jealous (and think you were on a secluded island).</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-sandkey2.jpg?itok=J6b37gtk&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Enjoy the long walk up the beach, then reward yourself with a sunset cocktail at the <a href="/profile/sheraton-sand-key-resort/1814">Sheraton Sand Key Resort</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-sandkey1.jpg?itok=Z46rHJC7&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Come for the white-sand beach, stay and explore the county park, featuring a dog-friendly area and kid-friendly playground.</p>
+</div></div></div>
+  </div></div>
+      </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Belleair Beach" data-lat="27.930161" data-lng="-82.84228000000002" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_belleair.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-belleair-beach" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Belleair <span class="lastword"> Beach<i class="vspcicon belleair-beach"></i></span></h2>
+            <div class="description"><p>Your stress will be gone with the wind when you chill out with the locals and condo vacationers along quiet Belleair Beach. Find a spot on 4,500 feet of secluded shoreline dotted with the area’s most lavish mansions and settle in for a reverie of sun, sand and seagulls. Parking spots can be nabbed at the beach access points with trails leading through the dunes to the beaches of this low-key gulf-front community.</p><p><strong>Top Tip:</strong> Bring snacks and water: there are no public facilities or commercial establishments on this stretch of beach.</p></div>
+            <a href="/profile/belleair-beach/200" class="button smaller white">Discover Belleair Beach</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc_brand_panel_beaches_0.jpg?itok=qikWDr3E&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don't Miss</strong>: Relaxing on the beach away from the hustle and bustle. No crowds, no active sports…just peace and quiet.</p>
+</div></div></div>
+  </div>
+          
+
+          <a id="term-163-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-163-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc_brand_panel_beaches_0.jpg?itok=qikWDr3E&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Relaxing on the beach away from the hustle and bustle. No crowds, no active sports…just peace and quiet.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/stpete-belleair-beach.jpg?itok=m2zP967D&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Approach the beach by boat and dock at the 7th Street Park Boat Ramp and the Municipal Marina across the street from the beach.</p>
+</div></div></div>
+  </div></div>
+      </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Indian Shores &amp; Indian Rocks Beach" data-lat="27.900699" data-lng="-82.84888810000001" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_indian.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-indian-shores--indian-rocks-beach" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Indian Shores &amp; Indian Rocks <span class="lastword"> Beach<i class="vspcicon indian-shores-indian-rocks-beach"></i></span></h2>
+            <div class="description"><p>Time for a nostalgic taste of Old Florida along this narrow barrier island. Some 20 beach access points lead to the picture-perfect beach. When hunger and thirst strike, you’ll find lots of options. The flip-flop crowd makes a beeline to Lulu’s Oyster Bar and Tap House, while Guppy's on the Beach Grill &amp; Bar serves al fresco seafood and cool drinks.&nbsp;</p><p><strong>Top Tip:</strong> Come early to grab a parking spot at Indian Rocks public beach.</p></div>
+            <a href="/communities/indian-shores-indian-rocks-beach" class="button smaller white">Discover Indian Shores &amp; Indian Rocks Beach</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/indina-shores-web.jpg?itok=tD9Y_yjT&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don't Miss:</strong> A long, well-deserved vacation in one of the many vacation rentals—the condo community here makes this beach a relaxing retreat.</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-167-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-167-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/indina-shores-web.jpg?itok=tD9Y_yjT&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss:</strong> A long, well-deserved vacation in one of the many vacation rentals—the condo community here makes this beach a relaxing retreat.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc_vr_360_full_screen_video_images_splash_harbor_0.jpg?itok=uhZE_6Fg&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss:</strong> Kids (and kids at heart) should stop by <a href="https://www.visitstpeteclearwater.com/360-video/make-big-splash-splash-harbour-water-park#pano_29287">Splash Harbour Water Park</a> for a fun day of slides, tubing, and mini-golf.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/stpete-seabird-sanctuary.jpg?itok=bm3G7r3X&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> Discover the tiny <a href="/profile/seaside-seabird-sanctuary/1974">Seaside Seabird Sanctuary</a> in Indian Shores, home to injured pelicans, birds of prey and other shorebirds.&nbsp;</p>
+</div></div></div>
+  </div></div>
+      </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="North Redington Beach &amp; Redington Shores" data-lat="27.8230451793153" data-lng="-82.82991349697113" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_redington.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-north-redington-beach--redington-shores" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">North Redington Beach &amp; Redington <span class="lastword"> Shores<i class="vspcicon north-redington-beach-redington-shores"></i></span></h2>
+            <div class="description"><p>Brilliant white sand and sparkling blue water attract many vacationers to Gulf Boulevard. You're bound to find a peaceful stretch of sand among the three small communities of Redington Shores, North Redington Beach and Redington Beach. Enjoy a relaxing stroll at sunset or sunbathe on the warm, wide beach.</p></div>
+            <a href="/communities/north-redington-beach-redington-shores" class="button smaller white">Discover Redington Beaches</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-redington1.jpg?itok=DovyBbvy&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss:</strong> Sunbathing on the wide, white-sand beach.</p>
+</div></div></div>
+  </div>
+          
+
+          <a id="term-169-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-169-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-redington1.jpg?itok=DovyBbvy&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> Sunbathing on the wide, white-sand beach.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/redington-beach-007.jpg?itok=JjdJC5K_&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don't Miss</strong>: Fiery Florida sunsets.</p>
+</div></div></div>
+  </div></div>
+      </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Madeira Beach" data-lat="27.785001" data-lng="-82.781836" data-heading="0">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_madeira.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-madeira-beach" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Madeira <span class="lastword"> Beach<i class="vspcicon madeira-beach"></i></span></h2>
+            <div class="description"><p>Head to “Mad Beach” where Johns Pass Village and Boardwalk is buzzing with more than 100 shops and restaurants in a Old Florida-style waterfront atmosphere. Take the Tom Stuart Causeway, an impressive bridge with great views, to this bustling beach. Explore the surf shops and art galleries, then enjoy fresh seafood along the boardwalk at the Friendly Fisherman or Sculley’s.</p><p><strong>Top Tip:</strong> The annual John’s Pass Seafood &amp; Music Festival is a family-friendly event featuring music, arts and crafts, and, of course, some of the best seafood in St. Pete/Clearwater.</p></div>
+            <a href="/communities/madeira-beach" class="button smaller white">Discover Madeira Beach</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/johns-pass-web.jpg?itok=9R81XQ3K&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss:</strong> Shopping for souvenirs and people watching along <a href="https://www.visitstpeteclearwater.com/video/johns-pass-village-and-boardwalk" style="visibility: hidden;">John’s Pass Village &amp; Boardwalk</a>.</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-168-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-168-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/johns-pass-web.jpg?itok=9R81XQ3K&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> Shopping for souvenirs and people watching along <a href="https://www.visitstpeteclearwater.com/video/johns-pass-village-and-boardwalk">John’s Pass Village &amp; Boardwalk</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-madeira1.jpg?itok=n2up22w8&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong>Take to the water from Hubbard’s Marina for their <a href="/profile/hubbards-marina-dolphin-watch/1038">Dolphin Watch tour</a>, a sunset cruise, or a charter boat excursion.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-madeira3.jpg?itok=qLgH6Z28&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong><a href="https://www.visitstpeteclearwater.com/johns-pass-seafood-festival">John’s Pass Seafood Festival</a>, a four-day celebration of seafood, music and more every October.</p>
+</div></div></div>
+  </div></div>
+      </div>
+              <div class="itinerary-region-video">
+          <div class="video-holder">
+            <a href="javascript:void(0)" class="youtube-play"><span class="play-button"><i aria-hidden="true" class="fa fa-play"></i></span><img src="https://img.youtube.com/vi/_nBhCfoJwFk/hqdefault.jpg" alt="Play Video"></a>
+            <iframe id="_nBhCfoJwFk" src="https://www.youtube.com/embed/_nBhCfoJwFk?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;listType=search" allow="autoplay" frameborder="0" allowfullscreen="" data-gtm-yt-inspected-642806_275="true" data-gtm-yt-inspected-642806_291="true" data-gtm-yt-inspected-642806_412="true"></iframe>
+          </div>
+          <div class="video-caption">Off the Hook! How to Catch and Eat Fresh Fish in Madeira Beach, FL</div>
+        </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Treasure Island" data-lat="27.7692234688027" data-lng="-82.77387142181396" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/treasure-island.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-treasure-island" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Treasure <span class="lastword"> Island<i class="vspcicon treasure-island"></i></span></h2>
+            <div class="description"><p>Three miles of sparkling sand lines the gulf with an array of lodging, from luxury resorts to kitschy hotels and small inns. Hang out at the surrounding popular beach bars, and for live music and dancing on the weekend, head over to Gators Café and Saloon at John’s Pass. Dance to the bongos at a Sunday night drum circle an hour before sunset.</p></div>
+            <a href="/communities/treasure-island" class="button smaller white">Discover Treasure Island</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/treasure_island_map_0.jpg?itok=5e8ZWCcG&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss: </strong>This wide beach boasts dozens of volleyball courts and a mile-long beach walk that runs parallel to the beachfront.</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-174-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-174-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/treasure_island_map_0.jpg?itok=5e8ZWCcG&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong>This wide beach boasts dozens of volleyball courts and a mile-long beach walk that runs parallel to the beachfront.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/sugar-sand_0.jpg?itok=DtJBdndx&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong>This beach is Florida’s “sand sculpture capital”—you’ll see why at the Sanding Ovations Masters Cup Sand Sculpture Competition every fall.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-treasure1.jpg?itok=whSiiPTS&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> Your beach vacay done right at <a href="/profile/treasure-island-beach-resort/5661">Treasure Island Beach Resort</a>. Luxurious and modern, every room on this property has a view of the gulf waters.</p>
+</div></div></div>
+  </div></div>
+      </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="St. Pete Beach" data-lat="27.7323835789806" data-lng="-82.74850845336908" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_stpetebeach.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-st-pete-beach" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">St. Pete <span class="lastword"> Beach<i class="vspcicon st-pete-beach"></i></span></h2>
+            <div class="description"><p>With miles of beaches, surf shops and boutiques, along with a vast array of lodging, dining and water sports for all ages, it's easy to see why St. Pete Beach was voted TripAdvisor’s No. 4 Beach in the U.S. in 2019. From The Don CeSar, to the family-friendly TradeWinds Island Resorts and dozens of hotels and small inns, there’s a place for all tastes and budgets. Try Jimmy B’s, the Undertow and Harry’s for a cocktail, or try one of the area's rooftop lounges for 360-degree views.</p><p><strong>An added bonus: </strong>if you feel the need for some culture and an urban vibe, fun-filled downtown St. Petersburg is just 20 minutes away.</p></div>
+            <a href="https://www.visitstpeteclearwater.com/communities/st-pete-beach" class="button smaller white">Discover St. Pete Beach</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-stpete1.jpg?itok=1Wn87KfN&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss:</strong> The calm waters here make for great SUPing. Rent one from <a href="/profile/postcard-inn-on-beach/1612" style="visibility: hidden;">Postcard Inn on the Beach</a>.</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-173-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-173-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-stpete1.jpg?itok=1Wn87KfN&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> The calm waters here make for great SUPing. Rent one from <a href="/profile/postcard-inn-on-beach/1612">Postcard Inn on the Beach</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/lowes-don-cesar-web.jpg?itok=t8Vhf2nw&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong>Places to stay that span five-star luxury (<a href="/profile/don-cesar/1254">The Don CeSar</a>), hip and happening (<a href="/profile/hotel-zamora/2496">Kimpton Hotel Zamora</a>) and family friendly (<a href="/hotels-resorts/tradewinds-island-grand-beach-resort/1086">TradeWinds Island Resort</a>). Looking for a high-adrenaline experience? Try <a href="https://www.visitstpeteclearwater.com/360-video/jetlev-experience">JetLeving</a> at TradeWinds.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/beach-bars-preview-pci_0.jpg?itok=UhG-uboG&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong>Rather, can’t miss—all the beach bars that dot this lively beach. Try a tipple at <a href="/profile/pci-beach-bar-snack-shack/1545">PCI Beach Bar</a>, <a href="/profile/swigwam-beach-bar/2007">The Swigwam</a>, or the <a href="/profile/undertow-beach-bar/2163">Undertow</a>.</p>
+</div></div></div>
+  </div></div>
+      </div>
+              <div class="itinerary-region-video">
+          <div class="video-holder">
+            <a href="javascript:void(0)" class="youtube-play"><span class="play-button"><i aria-hidden="true" class="fa fa-play"></i></span><img src="https://img.youtube.com/vi/pvKlAFtN5og/hqdefault.jpg" alt="Play Video"></a>
+            <iframe id="pvKlAFtN5og" src="https://www.youtube.com/embed/pvKlAFtN5og?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;listType=search" allow="autoplay" frameborder="0" allowfullscreen="" data-gtm-yt-inspected-642806_275="true" data-gtm-yt-inspected-642806_291="true" data-gtm-yt-inspected-642806_412="true"></iframe>
+          </div>
+          <div class="video-caption">St. Pete Beach Sunset from the TradeWinds Resort</div>
+        </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item" data-beach="Pass-A-Grille Beach" data-lat="27.6936831" data-lng="-82.73758650000002" data-heading="90">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_pass-a-grille.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-pass-a-grille-beach" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Pass-A-Grille <span class="lastword"> Beach<i class="vspcicon pass-grille-beach"></i></span></h2>
+            <div class="description"><p>Pass-a-Grille is the epitome of old Florida charm. Voted one of the Top 5 beaches in Florida by USA Today in 2015, it's widely considered a “locals’ beach,” so you’ll get a taste of what it’s like to live here with a visit to PAG. The beach stretches four miles of natural shoreline, along with tasty eateries like Paradise Grille and the Hurricane Restaurant (try the grouper sandwich). Reel in fish from Merry Pier (rod rentals available), or browse the shops and galleries along the Eighth Avenue Historic District.</p></div>
+            <a href="/communities/pass-grille-beach" class="button smaller white">Discover Pass-a-Grille Beach</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-passagrille2_0_0.jpg?itok=R-Ehc7Ma&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss: </strong>Spectacular sunset views (and grouper sandwiches) at <a href="/profile/hurricane-seafood-restaurant/1043" style="visibility: hidden;">Hurricane Seafood Restaurant</a>.</p>
+</div></div></div>
+  </div>
+          
+
+          <a id="term-170-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-170-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-passagrille2_0_0.jpg?itok=R-Ehc7Ma&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong>Spectacular sunset views (and grouper sandwiches) at <a href="/profile/hurricane-seafood-restaurant/1043">Hurricane Seafood Restaurant</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-passagrille1_0.jpg?itok=LZwh0bJX&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> Living like a local—this community is high-rise free and overflows with charm (some streets are even lined with tiki lights).</p>
+</div></div></div>
+  </div></div>
+      </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="beachDiv clearfix uncontained entity entity-asset asset-beach-itinerary-item last" data-beach="Shell Key, Fort De Soto Park &amp; Egmont Key" data-lat="27.675164" data-lng="-82.727708" data-heading="180">
+  <div class="beachBg" style="background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/beaches_bg_fortdesoto.jpg&quot;);"></div>
+  <div class="container">
+    <div id="beach-shell-key-fort-de-soto-park--egmont-key" class="columns nine animated fadeZoomUp" data-animation="fadeZoomUp">
+      <div class="beach-info beach-text">
+        <div>
+          <div class="text">
+            <h2 class="notranslate">Shell Key, Fort De Soto Park &amp; Egmont <span class="lastword"> Key<i class="vspcicon shell-key-fort-soto-park-egmont-key"></i></span></h2>
+            <div class="description"><p>This popular 1,136-acre county park stretches over five islands. Take in the natural scenes at Fort De Soto Park, with sights of the impressive Sunshine Skyway Bridge from the east end of the island. There are numerous beaches across the islands with shallow surf, picnic areas, a seven-mile paved trail, historic fort and a fishing pier. Fuel your adventure at the on-site concession before renting a kayak or bike.</p><p><strong>Top Tip:</strong> Let the kids explore the awesomely spooky remains of the 19th century fort, then catch the ferry to Egmont Key for a chance to do some snorkeling.</p></div>
+            <a href="/article/beach-every-mood" class="button smaller white">Discover Shell Key, Egmont Key &amp; Fort De Soto</a>          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-auto-height="calc" data-cycle-log="false"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-fortdesoto1.jpg?itok=RrOI32FI&quot;);">
+    <div class="caption" style="visibility: hidden;"><div class="container" style="visibility: hidden;"><div style="visibility: hidden;"><p style="visibility: hidden;"><strong style="visibility: hidden;">Don’t Miss: </strong><a href="https://www.visitstpeteclearwater.com/video/explore-fort-de-soto-park" style="visibility: hidden;">A day of outdoor fun</a> biking the Fort De Soto Park trails, kayaking the mangroves and exploring the old historic fort and <a href="/profile/fort-soto-batteries/829" style="visibility: hidden;">Fort De Soto Batteries</a>.</p>
+</div></div></div>
+  </div>
+          
+
+
+          <a id="term-172-cycle-prev" class="cycle-prev"><i class="fa fa-angle-left"></i></a>
+          <a id="term-172-cycle-next" class="cycle-next"><i class="fa fa-angle-right"></i></a>
+        <div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/vspc-beaches-slideshow-image-fortdesoto1.jpg?itok=RrOI32FI&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong><a href="https://www.visitstpeteclearwater.com/video/explore-fort-de-soto-park">A day of outdoor fun</a> biking the Fort De Soto Park trails, kayaking the mangroves and exploring the old historic fort and <a href="/profile/fort-soto-batteries/829">Fort De Soto Batteries</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/snorkeling-off-egmont-key-florida_0.jpg?itok=AaMEO1nk&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss: </strong><a href="https://www.visitstpeteclearwater.com/article/egmont-key">Egmont Key</a> is the perfect location to go snorkelling—<a href="/video/snorkeling-egmont-key">see why in our video</a>.</p>
+</div></div></div>
+  </div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; background-image: url(&quot;https://www.visitstpeteclearwater.com/sites/default/files/styles/itinerary_slide/public/shell-key-beaches-article-01_0.jpg?itok=P7c5Y94v&quot;);">
+    <div class="caption"><div class="container"><div><p><strong>Don’t Miss:</strong> There’s a reason Shell Key got its name—this is one of the best spots in Florida for shelling.</p>
+</div></div></div>
+  </div></div>
+      </div>
+              <div class="itinerary-region-video">
+          <div class="video-holder">
+            <a href="javascript:void(0)" class="youtube-play"><span class="play-button"><i aria-hidden="true" class="fa fa-play"></i></span><img src="https://img.youtube.com/vi/IMEraJsbEjo/hqdefault.jpg" alt="Play Video"></a>
+            <iframe id="IMEraJsbEjo" src="https://www.youtube.com/embed/IMEraJsbEjo?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;listType=search" allow="autoplay" frameborder="0" allowfullscreen="" data-gtm-yt-inspected-642806_275="true" data-gtm-yt-inspected-642806_291="true" data-gtm-yt-inspected-642806_412="true"></iframe>
+          </div>
+          <div class="video-caption">Explore Fort De Soto Park</div>
+        </div>
+          </div>
+    <div class="columns seven">    </div>
+  </div>
+</section>
+  <section class="entity entity-asset asset-vspc-flip-block flip-3">
+  <div class="flipping-circles">
+    <h2 class="section-title">Unforgettable Beach Experiences</h2>
+        <div class="circle-holder">
+      <article data-animation="fadeZoomUp" style="background-image:url(https://www.visitstpeteclearwater.com/sites/default/files/styles/large-crop/public/tester_kayaking_2.jpg?itok=TDNg6bhC)" class="animated fadeZoomUp">
+  <div class="outter-circle" target="_blank">
+    <div class="overlay circle orange">
+      <div class="front"><h3 class="all-caps">Beach, Bay &amp; River Kayaking</h3></div>
+      <div class="back full"><div class="back-text"><h4>Beach, Bay &amp; River Kayaking</h4><p>Clear waters, wonderful natural beauty and… what are you waiting for? Grab a kayak and chart your course for the ultimate on-the-water experience. Discover the exotic mangrove trails of Caladesi Island, cruise the coastline along our beaches, lose yourself for the day in the intracoastal waterways or cast a line closer to the fish.</p>
+<a href="https://www.visitstpeteclearwater.com/article/kayaking" aria-label="Learn More about Beach, Bay &amp; River Kayaking">Learn More <em class="fa fa-angle-right"></em></a></div></div>
+    </div>
+  </div>
+</article>
+<article data-animation="fadeZoomUp" style="background-image:url(https://www.visitstpeteclearwater.com/sites/default/files/styles/large-crop/public/vspc_vr_360_full_screen_video_images_anclote_camping_0.jpg?itok=hrnWX37f)" class="animated fadeZoomUp">
+  <div class="outter-circle" target="_blank">
+    <div class="overlay circle orange">
+      <div class="front"><h3 class="all-caps">Camp Paradise</h3></div>
+      <div class="back full"><div class="back-text"><h4>Camp Paradise</h4><p>The beach camping scene here is pure paradise. One beach to get your fire going is Anclote Key Preserve, a barrier island brimming with tropical beauty you have to see to believe. Its 400 acres of sandy beaches, 43 species of birds and an 1887 lighthouse beckon exploration and, even better, an overnight stay under the stars.&nbsp;</p>
+<a href="https://www.visitstpeteclearwater.com/360-video/best-beach-camping-florida-anclote-key-preserve" aria-label="Learn More about Camp Paradise">Learn More <em class="fa fa-angle-right"></em></a></div></div>
+    </div>
+  </div>
+</article>
+<article data-animation="fadeZoomUp" style="background-image:url(https://www.visitstpeteclearwater.com/sites/default/files/styles/large-crop/public/beaches-by-night-0362-npcc_0.jpg?itok=LyYPRUYs)" class="animated fadeZoomUp">
+  <div class="outter-circle" target="_blank">
+    <div class="overlay circle orange">
+      <div class="front"><h3 class="all-caps">Explore the Beaches at Night</h3></div>
+      <div class="back full"><div class="back-text"><h4>Explore the Beaches at Night</h4><p>We’re known for sunshiney days and stunning white sand beaches, but what happens when the sun goes down? The star-filled sky comes out and we turn on the lights! Dive into the world of Beach By Night, featuring “light painting,” a long-exposure photography technique, and you’ll never see our beaches the same again.</p>
+<a href="https://www.visitstpeteclearwater.com/photo-tour/st-peteclearwater-beach-night" aria-label="Learn More about Explore the Beaches at Night">Learn More <em class="fa fa-angle-right"></em></a></div></div>
+    </div>
+  </div>
+</article>
+    </div>
+  </div>
+</section>
+  
+<section class="entity entity-asset asset-crowdriff-gallery">
+  <div class="intro-header">
+    <div class="container"><h3>Dive into America's Best Beaches</h3></div>  </div>
+  <section class="crowdriff-block">
+    <div class="matrix-results jquery-once-1-processed" style="position: relative; height: 586.532px;">
+    <div class="matrix social instagram" style="position: absolute; left: 0%; top: 0px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/BiAPd25HOdN/">
+    <img alt="@fabfrancione" src="https://s3.amazonaws.com/crowdriff-media/full/d99f4ecc2d19ccee0a0d095827be6264e47ba76804c4b98357ea6e5725bb4da9.jpg" width="640" height="480">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 19.9156%; top: 0px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/Bh__r2SnSxg/">
+    <img alt="@tiffanybriggs_" src="https://s3.amazonaws.com/crowdriff-media/full/9e84e7a84a4a54c02ba063b58e0578ee4affe7eb6a8e0161b6dd2de4a6ef2c15.jpg" width="640" height="800">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 39.9156%; top: 0px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/Bh_k85lh6Bt/">
+    <img alt="@hals.jpeg" src="https://s3.amazonaws.com/crowdriff-media/full/f585384aeb3abff8add4e600040c27b69b0befb58607628ec6d3dd76431dadb0.jpg" width="1080" height="798">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 59.9156%; top: 0px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/Bh-aAQNnvV5/">
+    <img alt="@kate_whitejahusky" src="https://s3.amazonaws.com/crowdriff-media/full/2bf9058e7ae9ff2aa907130c722f2b146eb21cb8741c3b66aa759d11105d34bf.jpg" width="640" height="640">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 79.9156%; top: 0px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/Bh-SwzCHpnm/">
+    <img alt="@taliacomer" src="https://s3.amazonaws.com/crowdriff-media/full/407f449034558e239779f43f7acf85584c0ea2a958b04985690682b24005e157.jpg" width="1080" height="810">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 39.9156%; top: 178px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/BhEdniHhsqT/">
+    <img alt="@lervasaur" src="https://s3.amazonaws.com/crowdriff-media/full/2c2b10b3811948a08f6e3dc56857656dbd88c2f8ef7dd53d80d5205432daf939.jpg" width="1080" height="1350">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 0%; top: 180px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/Bgw95GUHvqT/">
+    <img alt="@ayce09" src="https://s3.amazonaws.com/crowdriff-media/full/e64ce9a3c017f14a753d6ec4a075a00d1c4ae9b3911fb6932fbcf4106206f07c.jpg" width="640" height="800">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 79.9156%; top: 180px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/Bgt67YJHK85/">
+    <img alt="@ayce09" src="https://s3.amazonaws.com/crowdriff-media/full/4653a7fa688a8f91b3ef04239e02d7d462d9d3216bf063d6438296b7d0e32cab.jpg" width="640" height="800">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 59.9156%; top: 236px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/BgT-iw3BpjJ/">
+    <img alt="@jordynstrange5" src="https://s3.amazonaws.com/crowdriff-media/full/68e73f969802ce83502bf70e5a4eb1d4539382290ade0a405186f5ba0801e117.jpg" width="1080" height="809">
+  </a>
+</div>
+<div class="matrix social instagram" style="position: absolute; left: 19.9156%; top: 293px;">
+  <a class="zoom crowdriff crowdriffModalLink" target="_blank" href="https://www.instagram.com/p/BgTwweDFHNL/">
+    <img alt="@brittanynguyen_" src="https://s3.amazonaws.com/crowdriff-media/full/7b710f5acec02e3d721b3b71ce5b5add76807e6ba4ea5b71d049cbc25fdddcf7.jpg" width="1080" height="1350">
+  </a>
+</div>
+  </div>
+  <i aria-hidden="true" class="fa fa-refresh fa-3x"></i>
+</section></section></div>
+
+  
+<!-- footer.tpl.php -->
+<section id="footer">
+	<div class="container">
+
+		<div class="eight columns">
+              <div class="block-nws-weather">
+            <div class="current-weather block-nws-weather">  <div class="current row">    <div class="label top-label">Current Weather</div>    <div class="weather-icon icon sunny"></div>    <div class="temp">      <span class="condition">Clear</span> 79°      <span class="label">Current Temperature</span>    </div>    <div class="temp-hi-lo"><strong class="top-label">High</strong> 83° /       <span>70° <strong class="top-label">Low</strong></span></div>  </div></div>            <div class="forecast-week"><div class="block-nws-weather"><div class="label">Weekly Forecast</div><div class="forecast forecast-day forecast-day-1"><div class="inside"><div class="icon forecast-icon partly-cloudy"></div><div class="temp forecast-temp">84°</div><div class="date forecast-weekday">Sat&nbsp;</div></div></div><div class="forecast forecast-day forecast-day-2"><div class="inside"><div class="icon forecast-icon partly-cloudy"></div><div class="temp forecast-temp">80°</div><div class="date forecast-weekday">Sun&nbsp;</div></div></div><div class="forecast forecast-day forecast-day-3"><div class="inside"><div class="icon forecast-icon partly-cloudy"></div><div class="temp forecast-temp">86°</div><div class="date forecast-weekday">Mon&nbsp;</div></div></div><div class="forecast forecast-day forecast-day-4"><div class="inside"><div class="icon forecast-icon partly-cloudy"></div><div class="temp forecast-temp">88°</div><div class="date forecast-weekday">Tue&nbsp;</div></div></div><div class="forecast forecast-day forecast-day-5"><div class="inside"><div class="icon forecast-icon partly-cloudy"></div><div class="temp forecast-temp">89°</div><div class="date forecast-weekday">Wed&nbsp;</div></div></div><div class="forecast-week-bottom"></div></div></div>        </div>
+        <div class="row">
+          <a class="weather-page-link" href="/weather">See Forecast &amp; Average Temperatures <i aria-hidden="true" class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      		</div>
+
+		<div class="eight columns">
+			<div class="row">
+				<div class="four columns alpha"><ul class="menu notranslate"><li class="first expanded"><a href="#" title="">About VSPC</a><ul><li class="first leaf"><a href="/form/contact-us" title="">Contact Us</a></li>
+<li class="leaf"><a href="/media" title="">Media</a></li>
+<li class="leaf"><a href="http://meetings.visitstpeteclearwater.com/" title="" target="_blank">Meetings</a></li>
+<li class="leaf"><a href="/travel-trade" title="">Travel Trade</a></li>
+<li class="leaf"><a href="http://www.sportsspc.com/" title="" target="_blank">Sports &amp; Events</a></li>
+<li class="leaf"><a href="http://www.filmspc.com/" title="" target="_blank">Film Commission</a></li>
+<li class="last leaf"><a href="/things-to-do/weddings" title="">Weddings</a></li>
+</ul></li>
+</ul></div>
+				<div class="four columns omega">
+          			<a title="" href="#" class="things-to-do-toggle">THINGS TO DO <i aria-hidden="true" class="fa fa-arrow-circle-down"></i></a><div class="things-to-do-wrapper"><ul class="menu"><li class="leaf"><a href="/events" title="">Events</a></li>
+<li class="leaf"><a href="/things-to-do/beaches-0" title="">Beaches</a></li>
+<li class="last leaf"><a href="/communities" title="">Communities</a></li>
+</ul></div>
+          			<ul class="menu">
+						<li><a href="/webcams">WEBCAMS</a></li>
+					</ul>
+					<ul class="menu">
+						<li>Languages</li>
+						<li class="language"><a target="_blank" href="/de" class="de">German</a></li>
+						<li class="language"><a target="_blank" href="/es" class="es">Spanish</a></li>
+						<li class="language"><a target="_blank" href="/br" class="br">Portuguese</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	
+</section>
+
+<!-- /footer.tpl.php -->
